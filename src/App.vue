@@ -45,6 +45,7 @@ export default {
     },
     addTask(task){
       this.tasks = [...this.tasks, task]
+      this.showAddTask = !this.showAddTask
     },
     toggleEditTask(id){
       this.showEditTask = !this.showEditTask
@@ -57,21 +58,20 @@ export default {
           break;
         }
       }
+      this.showEditTask = !this.showEditTask
     }
   },
   created(){
     this.tasks = [
         {
           id: 1,
-          text: " Appointy mene",
-          day: " Day is here",
+          text: "Batman",
           memberRole: "Admin"
         },
         {
           id: 2,
-          text: " I am Here",
-          day: " Day is here",
-          memberRole: "Tech"
+          text: "Robin",
+          memberRole: "Analyst"
         }
     ]
   }
